@@ -10,10 +10,10 @@ words: """
 
 word_index = imdb.get_word_index()
 reverse_word_index = dict(
-  [(value, key) for (key, value) in word_index.items()]
+    [(value, key) for (key, value) in word_index.items()]
 )
 decoded_review = ' '.join(
-  [reverse_word_index.get(i, '?') for i in train_data[0]]
+    [reverse_word_index.get(i, '?') for i in train_data[0]]
 )
 print(decoded_review)
 def vectorize_sequences(sequences, dimension=10000):
